@@ -5,7 +5,7 @@ chrome.webRequest.onHeadersReceived.addListener(function(details) {
     var isCSPHeader = /content-security-policy/i.test(details.responseHeaders[i].name);
     if (isCSPHeader) {
       var csp = details.responseHeaders[i].value;
-      csp = csp.replace('script-src', 'script-src \'unsafe-eval\'');
+     // csp = csp.replace('script-src', 'script-src \'unsafe-eval\'');
       //csp = csp.replace('font-src', 'font-src ' + hosts);
       details.responseHeaders[i].value = csp;
     }

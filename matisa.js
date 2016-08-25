@@ -1,19 +1,6 @@
 
-function n() {
-/*$('.js-file-line').each(function(){
-      $(this).html($(this).html().replace(/<\/span>(.+?)<span class=\"pl-smi\">/g,'$1<\/span><span class=\"pl-smi\">'));
-      });
-      
-      $('.js-file-line').each(function(){
+function matisaRefreshMath() {
 
-          var regex = /<span class=\"pl-smi\">.+?<\/span><span class=\"pl-smi\">.+?<\/span>/;
-          var tobereplaced = $(this).html()
-          while (regex.test(tobereplaced)) {
-            tobereplaced = tobereplaced.replace(/<span class=\"pl-smi\">(.+?)<\/span><span class=\"pl-smi\">(.+?)<\/span>/g,'<span class=\"pl-smi\">$1$2<\/span>')
-          }
-          $(this).html(tobereplaced)
-      });
-*/
       fileLines = document.getElementsByClassName("js-file-line")
           for (i = 0; i < fileLines.length; i++) {
               // find the first .pl-smi
@@ -69,15 +56,6 @@ function n() {
         target = fileLines[i].innerHTML.replace(/\\emph\{(.+?)\}/g,'<span style=\"font-style: italic;\">$1</span>')
         fileLines[i].innerHTML = target
       }
-/*
-      //$('body').html().replace(/<span class=\"pl-smi\">(.+?)<\/span>(.+?)<span class=\"pl-smi\">(.+?)<\/span>/g,'<span class=\"pl-smi\">X:$1$2$3<\/span>');
-      $("span.pl-s").text(function(){
-      return $(this).text().replace(/\\<\^sup>(.+?)/g,'\\(^$1\\)').replace(/\\<\^sub>(.+?)/g,'\\(_{$1}\\)').replace(/\\<\^bsub>(.+?)\\<\^esub>/g,'\\(\\_{$1}\\)').replace(/\\<(.+?)>/g,'\\(\\$1\\)');
-      });
 
-      $("span.pl-smi").text(function(){
-      return $(this).text().replace(/\\<\^sup>(.+?)/g,'\\(^$1\\)').replace(/\\<\^sub>(.+?)/g,'\\(_{$1}\\)').replace(/\\<\^bsub>(.+?)\\<\^esub>/g,'\\(\\_{$1}\\)').replace(/\\<(.+?)>/g,'\\(\\$1\\)');
-      });
-      */
       MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }

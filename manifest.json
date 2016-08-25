@@ -3,14 +3,14 @@
 
   "name": "Matisa",
   "description": "This extension allows Isabelle math syntax on GitHub to be appropriately typeset.",
-  "version": "1.0",
+  "version": "1.0.3",
 
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "matisa128.png",
     "default_popup": "popup.html"
   },
-  "background": {
-    "scripts": ["background.js"]
+  "icons": { "16": "matisa16.png",
+            "128": "matisa128.png" 
   },
   "content_scripts": [
     {
@@ -25,20 +25,11 @@
     "fonts/*",
     "jax/*",
     "localization/*",
-    "jquery.js",
     "matisa.js",
     "config.js",
     "parser.js"
   ],
   "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "webNavigation",
-    "tabs",
-    "activeTab",
-    "*://github.com/*",
-    "https://cdn.mathjax.org/*"
+    "*://github.com/*"
   ]
-//  ,
-//  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

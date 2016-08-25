@@ -1,5 +1,8 @@
  window.MathJax = {
-     // AuthorInit: function () {MathJax.Ajax.config.root = chrome.extension.getURL('mathjax')},
+      AuthorInit: function () {
+      		MathJax.Hub.Register.StartupHook("End",matisaRefreshMath);
+      		//MathJax.Ajax.config.root = chrome.extension.getURL('mathjax')
+      	},
       jax: ["input/TeX","output/CommonHTML"],
       extensions: ["tex2jax.js"],
       tex2jax: {inlineMath: [['\\(','\\)']]},
@@ -226,3 +229,4 @@ zero:"{\\mathbf{0}}"
 ,bigsqcap:"{\\mathop{⨅}}"
   		} }
     };
+
