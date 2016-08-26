@@ -18,7 +18,7 @@
 
     isabelleparser = document.createElement('script');
     isabelleparser.setAttribute('type', 'text/javascript');
-    isabelleparser.setAttribute('src', chrome.extension.getURL('parser.js'));
+    isabelleparser.setAttribute('src', chrome.extension.getURL('isabellesyntax.js'));
 
     mathjax = document.createElement('script');
   	mathjax.setAttribute('type', 'text/javascript');

@@ -27,7 +27,7 @@
     "localization/*",
     "matisa.js",
     "config.js",
-    "parser.js"
+    "isabellesyntax.js"
   ],
   "permissions": [
     "*://github.com/*"

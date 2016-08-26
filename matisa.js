@@ -5,8 +5,8 @@ function matisaRefreshMath() {
           for (i = 0; i < fileLines.length; i++) {
               // find the first .pl-smi
               elems = fileLines[i].childNodes;
-              //elems = fileLines[i].getElementsByClassName("pl-smi")
-
+              
+              // flag
               plsmi = null
               removals = []
               // iterate over the children
@@ -50,12 +50,13 @@ function matisaRefreshMath() {
         fileLines[i].textContent = target
       }
 
+    /* Future work...
       fileLines = document.getElementsByClassName("pl-c")
       for (i = 0; i < fileLines.length; i++) {
         source = fileLines[i].innerHTML 
         target = fileLines[i].innerHTML.replace(/\\emph\{(.+?)\}/g,'<span style=\"font-style: italic;\">$1</span>')
         fileLines[i].innerHTML = target
       }
-
+    */
       MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
