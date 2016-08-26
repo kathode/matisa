@@ -30,9 +30,7 @@
 
   	popstate = document.createElement('script');
   	popstate.setAttribute('type', 'text/javascript');
-  	popstate.innerHTML = "\
-      document.addEventListener(\"pjax:end\", function() { \
-  			matisaRefreshMath(); MathJax.Hub.Queue([\"Typeset\",MathJax.Hub]); }, { passive: true })"
+  	popstate.innerHTML = "document.addEventListener(\"pjax:end\", function() { matisaRefreshMath(); MathJax.Hub.Queue([\"Typeset\",MathJax.Hub]); }, { passive: true })"
 
     document.head.appendChild(matisa);
   	document.head.appendChild(config);
