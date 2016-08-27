@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     var version = document.getElementsByClassName("version");
     if (version.length > 0) {
-      version[0].textContent = chrome.app.getDetails().version;
+      version[0].textContent = chrome.runtime.getManifest().version;
     }
 });
