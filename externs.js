@@ -10,3 +10,5 @@
   var MathJax;
   var isabelle;
   function parse(){};
+  function getManifest(){};
+  function version(){};

@@ -3,7 +3,7 @@
 
   "name": "Matisa",
   "description": "This extension allows Isabelle math syntax on GitHub to be appropriately typeset.",
-  "version": "1.0.3",
+  "version": "1.0.6",
 
   "browser_action": {
     "default_icon": "matisa128.png",

@@ -176,7 +176,7 @@ zero:"{\\mathbf{0}}"
 ,Sqinter:"{\\bigsqcap\\,}" 
 ,Uplus:"{\\biguplus\\,}"
 ,noteq:"{\\neq}"        // Different from isabellesym.sty but better looking.
-//,bar:"{\\mid}"        // Keeping MathJax definition, will reconsider if necessary.
+,bar:"{\\mid}"        // Keeping MathJax definition, will reconsider if necessary.
 ,bold:"{\\bf}"
 ,plusminus:"{\\pm}"
 ,minusplus:"{\\mp}"      	
