@@ -10,13 +10,13 @@
  */
  
 { 
-  var cmdMap = { theta:"vartheta", not: "lnot", epsilon:"varepsilon", _ : "\\_" } 
+  var cmdMap = { theta:"vartheta", And: "bigwedge", not: "lnot", epsilon:"varepsilon", _ : "\\_" } 
   function returnCommand(original) {
   var rename = cmdMap[original]
       if (rename != null) {
          return rename
       } else {
-         return original.replace(/\_/g,'\\_')
+         return original.replace(/\_/g,'\\_').replace(/&/g,'\\&')
       }
   }
 }
