@@ -42,8 +42,8 @@
     var mathjax = document.createElement('script');
   	mathjax.setAttribute('type', 'text/javascript');
   	mathjax.setAttribute('src', chrome.extension.getURL('MathJax.js'));
-
+  
+    document.head.appendChild(isabelleparser);
   	document.head.appendChild(matisa);
   	document.head.appendChild(mathjax);
-    document.head.appendChild(isabelleparser);
   }

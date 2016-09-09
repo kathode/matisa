@@ -59,6 +59,26 @@
         color: #333;
         font-size: 0.8em;
       }
+      ul.options {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      ul.options li {
+        margin: 0.5em 0 0 0;
+      }
+      ul.options2 li {
+        margin: 0.25em 0 0 0.5em;
+      }
+      input {
+        margin-top: 0;
+        vertical-align: middle;
+      }
+      h2 {
+        color: darkslateblue;
+        margin:1em 0 0.25em 0;
+        font-size: 120%;
+      }
     </style>
 
     <!--
@@ -73,8 +93,21 @@
   <body>
     <div class="header"><h1>Matisa</h1> <span class="version"></span></div>
     <div id="container">
-    <p>Transforming <a href="https://isabelle.in.tum.de/">Isabelle</a> syntax into beautifully typed math thanks to <a href="https://www.mathjax.org/">MathJax</a>.</p>
+    <p style="margin: 1em;"><em>Transforming <a href="https://isabelle.in.tum.de/">Isabelle</a> syntax into beautifully typed math thanks to <a href="https://www.mathjax.org/">MathJax</a>.</em></p>
     <p>See it in action at <a href="https://github.com/isabelle-utp/utp-main/tree/shallow.2016">isabelle-utp</a>.
+    <h2>Options</h2>
+      <ul class="options">
+        <li><input type="checkbox" name="site" value="github">GitHub integration
+            <ul class="options options2">
+              <li>&#8627;<input type="checkbox" name="github-theme" value="jedit">Isabelle theme</li>
+            </ul>
+        </li>
+        <li><input type="checkbox" name="site" value="bitbucket">Bitbucket integration <em>(experimental)</em>
+            <ul class="options options2">
+              <li>&#8627;<input type="checkbox" name="github-theme" value="jedit">Isabelle theme</li>
+            </ul>
+        </li>
+      </ul>
     <hr>
     <div id="footer">
       <p>Developed by <a href="https://www-users.cs.york.ac.uk/pfr/">Pedro Ribeiro</a> at the <a href="https://www.cs.york.ac.uk/">Department of Computer Science</a>, <a href="https://www.york.ac.uk/">University of York</a>.</p>

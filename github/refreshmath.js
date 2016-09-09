@@ -63,4 +63,4 @@ function matisaRefreshMath() {
 }
 
 window['matisaRefreshMath'] = matisaRefreshMath;
-document.addEventListener("pjax:end", function() { matisaRefreshMath(); MathJax.Hub.Queue(["Typeset",MathJax.Hub]); }, { passive: true })
+document.addEventListener("pjax:end", matisaRefreshMath);//function() { matisaRefreshMath(); MathJax.Hub.Queue(["Typeset",MathJax.Hub]); }, { passive: true })

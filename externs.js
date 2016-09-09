@@ -12,3 +12,5 @@
   function parse(){};
   function getManifest(){};
   function version(){};
+
+  function on(){};

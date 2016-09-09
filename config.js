@@ -5,7 +5,8 @@
       	},
       jax: ["input/TeX","output/CommonHTML"],
       extensions: ["tex2jax.js"],
-      tex2jax: {inlineMath: [['\\(','\\)']]},
+      tex2jax: {inlineMath: [['\\(','\\)']],
+                skipTags: ["script","noscript","style","textarea","code"]},
       TeX: { 
         extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
         Macros: {
@@ -221,8 +222,8 @@ zero:"{\\mathbf{0}}"
 ,then:"{\\mathbin{>\\!\\!\\!>}}"     // From isabellesym.sty
 ,hole:"{\\rm\\mathop{⌑}}"         // Based on isabellestym.sty - I think there is no direct mapping so it may break.
 //,newline:                       // Using MathJax built-in.
-,open:"{\\raise.3ex\\hbox{\\scriptscriptstyle\\langle}}" // Based on isabellestym.sty
-,close:"{\\raise.3ex\\hbox{\\scriptscriptstyle\\rangle}}" // Based on isabellestym.sty
+,open:"{\\raise.3ex{\\scriptscriptstyle\\langle}}" // Based on isabellestym.sty
+,close:"{\\raise.3ex{\\scriptscriptstyle\\rangle}}" // Based on isabellestym.sty
 ,comment:"{---}"                  // From isabellesym.sty. Is this needed?
 // Extras not in isabellesym.sty but needed:
 ,sub: ["{_{#1}}",1]   
